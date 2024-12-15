@@ -80,5 +80,13 @@ class Hero {
     for (const role of roles){
         console.log(`\nCréation du ${role.toUpperCase()}`)
         const name = prompt(`Entrez un nome pour le ${role}: `)
+
+        // Assurer au moins 1 HP par héros
+        const hp = parseInt(prompt(`Attribuez des points de vie (reste : ${remainingHp}): `))
+        if (hp < 1 || hp > remainingHp){
+            console.log("Valeur invalide. Assurez-vous de respecter les points restants.")
+            return createHeroes()
+        }
+        remainingHp -= hp
     }
   }

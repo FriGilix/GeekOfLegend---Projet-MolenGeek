@@ -34,5 +34,15 @@ class Hero {
                 this.mana += 7 // Récupère 7 points de mana
                 return
             }
+
+            if (this.role === "archer") {
+                if (this.arrows >= 2) {
+                  this.arrows -= 2; // Consomme 2 flèches
+                } else {
+                  console.log(`${this.nom} récupère 6 flèches.`);
+                  this.arrows += 6; // Récupère 6 flèches
+                  return;
+                }
+              }
         }
 }

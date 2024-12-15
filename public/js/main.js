@@ -44,5 +44,8 @@ class Hero {
                   return;
                 }
               }
+
+            console.log(`${this.name} inflige ${Math.round(damage)} dégâts à ${boss.name}.`);
+            boss.hp -= Math.round(damage);
         }
 }

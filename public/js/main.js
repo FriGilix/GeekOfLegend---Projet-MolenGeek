@@ -163,4 +163,23 @@ const enigmas = [
     { question: "Je commence la nuit, et je finis la matin. Qui suis-je", answer: "la lettre n"},
 ]
 
+// Fonction pour poser une énigme
+function poseEnigma(){
+    const enigma = enigmas[Math.floor(Math.random() * enigmas.length)]
+    console.log(`Enigme : ${enigma.question}`)
+
+    for (let i=0; i < 3; i++){
+        const answer = prompt("Votre réponse : ").toLowerCase()
+        if (answer === enigma.answer){
+            console.log("Bravo ! Vous avez résolu l'énigme. Le boss est vaincu !")
+            return true    
+        } else {
+            console.log("Mauvaise réponse.")
+        }
+    }
+
+    console.log("Échec ! Les héros sont décimés par le boss.")
+    return false
+}
+
 

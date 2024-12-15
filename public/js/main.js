@@ -95,5 +95,13 @@ class Hero {
             console.log("Valeur invalide. Assurez-vous de respecter les points restants.")
             return createHeroes()
         }
+        remainingAttack -= attack
+
+        const posture = prompt(`Choisissez la posture initiale (attaque/défense): `).toLowerCase()
+        if (posture !== "attaque" && posture !== "défense"){
+            console.log("Posture invalide. Par défaut, attaque sera utilisée.")
+        }
+
+        
     }
   }

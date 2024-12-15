@@ -125,3 +125,10 @@ class Hero {
     new Boss("Chronos", 300, 30),
     new Boss("Lilith", 200, 40),
   ]
+
+  // Sélection aléatoire d'un boss
+  function selectRandomBoss(){
+    return bosses[Math.floor(Math.random() * bosses.length)]
+  }
+
+  

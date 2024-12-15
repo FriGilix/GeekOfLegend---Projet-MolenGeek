@@ -119,4 +119,9 @@ class Hero {
     }
   }
 
-  
+  // Création des Boss
+  const bosses = [
+    new Boss("Sauron", 250, 35),
+    new Boss("Chronos", 300, 30),
+    new Boss("Lilith", 200, 40),
+  ]

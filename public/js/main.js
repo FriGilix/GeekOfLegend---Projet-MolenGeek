@@ -67,4 +67,18 @@ class Hero {
     }
   }
   
-  
+  // L'utilisateur crée les héros
+  function createHeroes(){
+    const totalHp = 150
+    const totalAttack = 120
+    let remainingHp = totalHp
+    let remainingAttack = totalAttack
+
+    const roles = ["guerrier", "mage", "archer"]
+    const heroes = []
+
+    for (const role of roles){
+        console.log(`\nCréation du ${role.toUpperCase()}`)
+        const name = prompt(`Entrez un nome pour le ${role}: `)
+    }
+  }

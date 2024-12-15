@@ -109,3 +109,14 @@ class Hero {
 
     return heroes
   }
+
+  // Classe pour créer les Boss
+  class Boss {
+    constructor(name, hp, attack){
+        this.name = name
+        this.hp = hp
+        this.attack = attack
+    }
+  }
+
+  

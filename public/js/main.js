@@ -12,4 +12,18 @@ class Hero {
         if (role === "mage") this.mana = 7
         if (role === "archer") this.arrows = 6
     }
+
+    // Attaquer
+    attackBoss(boss){
+        let damage = this.attaque
+
+        if (this.posture === "attaque"){
+            damage *= 1.2 // Bonus 20% d'attaque
+        }
+
+        if (this.role === "guerrier" && this.rage >= 4){
+            damage *= 1.25 // Bonus 25% avec 4 points de rage
+            this.rage = 0 // Réinitialisation de l'ulti
+        }
+
 }

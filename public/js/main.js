@@ -48,4 +48,13 @@ class Hero {
             console.log(`${this.name} inflige ${Math.round(damage)} dégâts à ${boss.name}.`);
             boss.hp -= Math.round(damage);
         }
+
+        // Quand le boss attque un des héros
+        takeDamage(damage){
+            if (this.posture === "défense"){
+                damage /= 2 // Réduit les dégâts de moitié
+            }
+            this.hp -= Math.round(damage)
+            if (this.hp < 0) this.hp = 0
+        }
 }

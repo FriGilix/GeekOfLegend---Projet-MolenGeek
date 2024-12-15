@@ -156,4 +156,11 @@ class Hero {
     console.log("--------------------\n")
 }
 
+// Liste des énigmes
+const enigmas = [
+    { question: "Quel est le viking le plus célèbre au monde ?", answer: "Ragnar Lothbrok"},
+    { question: "Qu'est-ce qui monte et descend sans bouger ?", answer: "un escalier"},
+    { question: "Je commence la nuit, et je finis la matin. Qui suis-je", answer: "la lettre n"},
+]
+
 

@@ -102,6 +102,10 @@ class Hero {
             console.log("Posture invalide. Par défaut, attaque sera utilisée.")
         }
 
-        
+        const hero = new Hero(name, hp, attack, role)
+        hero.posture = posture || "attaque"
+        heroes.push(hero)
     }
+
+    return heroes
   }

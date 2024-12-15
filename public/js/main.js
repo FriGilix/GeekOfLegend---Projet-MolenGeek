@@ -136,6 +136,24 @@ class Hero {
     const aliveHeroes = heroes.filter((hero) => hero.hp > 0)
     if (aliveHeroes.length === 0) return null
     return aliveHeroes[Math.floor(Math.random() * aliveHeroes.length)]
-
-    
   }
+
+  // Fonction pour afficher l'état actuel des personnages
+  function displayStatus(heroes, boss) {
+    console.log("\n--- État des personnages ---")
+    heroes.forEeach((hero) => {
+        console.log(
+            `${hero.name}: ${hero.hp > 0 ? hero.hp : "KO"} HP | Posture: ${hero.posture} | ${
+          hero.role === "guerrier"
+            ? `Rage: ${hero.rage}`
+            : hero.role === "mage"
+            ? `Mana: ${hero.mana}`
+            : `Flèches: ${hero.arrows}`
+        }`
+      );
+    })
+    console.log(`${boss.name}: ${boss.hp > 0 ? boss.hp : "KO"} HP`)
+    console.log("--------------------\n")
+}
+
+

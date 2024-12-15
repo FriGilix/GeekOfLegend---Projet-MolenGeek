@@ -131,4 +131,11 @@ class Hero {
     return bosses[Math.floor(Math.random() * bosses.length)]
   }
 
-  
+  // Fonction pour choisir un héros aléatoire encore vivant
+  function getRandomHero(heroes){
+    const aliveHeroes = heroes.filter((hero) => hero.hp > 0)
+    if (aliveHeroes.length === 0) return null
+    return aliveHeroes[Math.floor(Math.random() * aliveHeroes.length)]
+
+    
+  }

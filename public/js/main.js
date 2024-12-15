@@ -26,4 +26,13 @@ class Hero {
             this.rage = 0 // Réinitialisation de l'ulti
         }
 
+        if (this.role === "mage"){
+            if (this.mana >= 2){
+                this.mana -= 2 // Consomme 2 points de mana
+            } else {
+                console.log (`${this.nom} récupère 7 points de mana.`)
+                this.mana += 7 // Récupère 7 points de mana
+                return
+            }
+        }
 }

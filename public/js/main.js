@@ -88,5 +88,12 @@ class Hero {
             return createHeroes()
         }
         remainingHp -= hp
+
+        // Assurer au moins 1 point d'attaque par héros
+        const attack = parseInt(prompt(`Attribuez des points d'attaque (reste: ${remainingAttack}): `))
+        if (attack < 1 || attack > remainingAttack){
+            console.log("Valeur invalide. Assurez-vous de respecter les points restants.")
+            return createHeroes()
+        }
     }
   }
